@@ -1,0 +1,25 @@
+# Notes to build libfixbuf on Ubuntu 24.04
+
+##  Required packages:
+sudo apt install libglib2.0-dev xsltproc
+
+Automake on Ubuntu 24.04 is not at the right version 1.16.5
+
+The version 1.17 can be found at https://ftp.gnu.org/gnu/automake/
+
+
+First built and install automake 1.17
+
+cd automake-1.17
+./configure
+make
+make install
+
+check if aclocal is working and at the right version
+
+aclocal --version
+
+go to libfixbuf
+./configure
+make
+make install
